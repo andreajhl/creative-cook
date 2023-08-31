@@ -1,35 +1,35 @@
-export default ({
+export default {
   title: 'Cocina Creativa',
   navbar: {
-    placeholder: '¿Que quieres preparar hoy?',
+    placeholder: '¿Qué quieres preparar hoy?',
   },
   product: {
-    calories: 'Calorias',
+    calories: 'Calorías',
     ingredients: 'Ingredientes',
-    infoNutritional: 'Info Nutricional',
-    portion: 'Prciones:'
+    infoNutritional: 'Información Nutricional',
+    portion: 'Porciones:'
   },
   carousel: {
-    next: 'Next',
-    prev: 'Previous'
+    next: 'Siguiente',
+    prev: 'Anterior'
   },
   nav: {
-    menu: 'Menu',
+    menu: 'Menú',
     close: 'Cerrar'
   },
   nutritionTable: [
-    'Contenido energetico',
-    'Valor por porción'
+    'Contenido Energético',
+    'Valor por Porción'
   ],
   home: {
     banner: {
       health: {
         title: '+Salud',
-        subtitle: 'Recetas sanas y faciles'
+        subtitle: 'Recetas sanas y fáciles'
       },
       table: {
-        title: 'Nutricion',
-        subtitle: 'Tabla nutricional por porcion'
+        title: 'Nutrición',
+        subtitle: 'Tabla nutricional por porción'
       },
       recipes: {
         title: '+60',
@@ -43,12 +43,11 @@ export default ({
     }
   },
   warnings: {
-    createOrden: 'Error no controlado, hable con el administrador',
     loading: 'Cargando...',
     pageNotFound: {
-      title: 'Oops!',
+      title: '¡Oops!',
       subtitle: 'Lo sentimos. No encontramos la página',
-      retry: 'Regresar al Home'
+      retry: 'Regresar al Inicio'
     }
   }
-});
+};

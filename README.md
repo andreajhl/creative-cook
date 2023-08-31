@@ -1,7 +1,7 @@
 
 # Cocina Creativa
 
-  Esta aplicación está desarrollada utilizando Next.js y TypeScript. Utiliza la API pública de Edamam para obtener las recetas. En la página de inicio, encontrarás un banner con las categorías disponibles y un buscador.
+  Esta aplicación ha sido desarrollada utilizando Next.js y TypeScript. Hace uso de la API pública de Edamam para obtener recetas. En la página de inicio, encontrarás un banner con las categorías disponibles y un buscador.
  
 <br>
 
@@ -46,10 +46,11 @@
 ### Pantallas del Proyecto y Usos
 <hr>
 
-* ### Home
+* ### Página de Inicio
+
 <br>
 
-  La página de inicio cuenta con un carrusel de bienvenida, información sobre la pagina, un banner de categorías para seleccionar y un buscador para traer recetas relacionados.
+La página de inicio cuenta con un carrusel de bienvenida, información sobre la página, un banner de categorías para seleccionar y un buscador para traer recetas relacionadas.
 <br>
 
 
@@ -61,7 +62,7 @@
 * ### Listado de Recetas
 <br>
 
-  Ya sea que selecciones una categoría o busques un receta desde el formulario, llegarás a esta página donde encontrarás un listado de recetas encontradas (hasta 4 productos por página). Desde aquí, puedes ir a los detalles haciendo clic sobre el título.
+  Ya sea que selecciones una categoría o busques una receta desde el formulario, llegarás a esta página donde tendrás un listado de recetas encontradas (hasta 4 recetas por página). Desde aquí, puedes acceder a los detalles haciendo clic sobre el título.
 <br>
 
 <img src="public/images/readme/recipe-list.png" width="800" height="400" />
@@ -71,7 +72,7 @@
 * ### Detalles de la Receta
 <br>
 
-  En esta pantalla podrás encontrar la lista de ingredientes, la tabla nutricional, para cuantas porciones alcanza y su categoria.
+  En esta pantalla podrás encontrar la lista de ingredientes, la tabla nutricional, la cantidad de porciones y su categoría.
 <br>
 
 <img src="public/images/readme/recipe-detail.png" width="800" height="400" />
@@ -81,7 +82,7 @@
 * ### Página 404
 <br>
 
-  Si ocurre algun error cargando algun modulo o intentas acceder a una página que no existe, serás redirigido aquí. No te preocupes, puedes volver a la página de inicio desde el logotipo ubicado en la esquina superior izquierda o desde el boton.
+  Si ocurre algún error al cargar algún módulo o intentas acceder a una página que no existe, serás redirigido aquí. No te preocupes, puedes volver a la página de inicio desde el logotipo ubicado en la esquina superior izquierda o desde el botón.
 <br>
 
 <img src="public/images/readme/not-found.png" width="800" height="400" />
