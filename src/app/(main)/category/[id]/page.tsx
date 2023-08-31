@@ -1,17 +1,37 @@
 'use client';
 
-import { redirect } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import RecipeList from '@/components/recipes/recipeList';
 import { arrayIsEmpty } from '@/utils/arrays';
 import { getRecipeByCategory } from '@/client';
 import { ParamsProps } from '@/interfaces/pages';
+import { RecipeList as RecipeItem } from '@/interfaces/client';
+import Loading from '@/app/loading';
 
-const Page = async ({ params }: ParamsProps) => {
-  const data = await getRecipeByCategory(params.id);
+const Page = ({ params }: ParamsProps) => {
+  const router = useRouter();
 
-  if (!data || arrayIsEmpty(data)) redirect('/404');
+  const [recipeList, setRecipeList] = useState<RecipeItem[]>([]);
 
-  return (<RecipeList recipeList={data} />);
+  const getRecipeList = async() => {
+    const data = await getRecipeByCategory(params.id);
+
+    if(!data) return router.push('/404');
+    setRecipeList(data);
+  };
+
+  useEffect(() =>{ getRecipeList(); }, []);
+
+  return (
+    <>
+      {
+        arrayIsEmpty(recipeList)
+          ? <Loading />
+          : <RecipeList recipeList={recipeList} />
+      }
+    </>
+  );
 };
 
 export default Page;

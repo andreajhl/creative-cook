@@ -1,17 +1,37 @@
 'use client';
 
-import { redirect } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import RecipeList from '@/components/recipes/recipeList';
 import { arrayIsEmpty } from '@/utils/arrays';
 import { getRecipeSearch } from '@/client';
 import { ParamsProps } from '@/interfaces/pages';
+import { RecipeList as RecipeItem } from '@/interfaces/client';
+import Loading from '@/app/loading';
 
-const Page = async ({ searchParams }: ParamsProps) => {
-  const data = await getRecipeSearch(searchParams.search);
+const Page = ({ searchParams }: ParamsProps) => {
+   const router = useRouter();
 
-  if (!data || arrayIsEmpty(data)) redirect('/404');
+  const [recipeList, setRecipeList] = useState<RecipeItem[]>([]);
 
-  return (<RecipeList recipeList={data} />);
+  const getRecipeList = async() => {
+    const data = await getRecipeSearch(searchParams.search);
+
+    if(!data) return router.push('/404');
+    setRecipeList(data);
+  };
+
+  useEffect(() =>{ getRecipeList(); }, []);
+
+  return (
+    <>
+      {
+        arrayIsEmpty(recipeList)
+          ? <Loading />
+          : <RecipeList recipeList={recipeList} />
+      }
+    </>
+  );
 };
 
 export default Page;
