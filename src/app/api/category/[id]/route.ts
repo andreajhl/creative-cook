@@ -22,6 +22,6 @@ export async function GET (_: NextRequest, { params }: ParamsProps) {
     return NextResponse.json(data.hits);
   } catch (error) {
     console.log('---ERROR----', error);
-    return error;
+    throw error;
   }
 }

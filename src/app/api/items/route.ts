@@ -21,6 +21,6 @@ export async function GET (req: NextRequest) {
     return NextResponse.json(data.hits);
   } catch (error) {
     console.log('---ERROR----', error);
-    return error;
+    throw error;
   }
 }

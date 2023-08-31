@@ -1,28 +1,23 @@
 'use client';
 
-import { type ChangeEvent, type FormEvent, useEffect, useState } from 'react';
+import { type ChangeEvent, type FormEvent, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { PiMagnifyingGlassBold } from 'react-icons/pi';
-import { useDebounce } from '@/hooks/useDebounce';
 import { normalizeText } from '@/utils/strings';
 import wordings from '@/wordings';
-
-const INTERVAL_TIME = 1500;
 
 const Search = () => {
   const { navbar: { placeholder } } = wordings;
 
   const router = useRouter();
-  const [search, setSearch] = useState<string>();
+  const [search, setSearch] = useState<string>('');
 
   const handleRedirect = () => {
-    if (search) {
+    if (search.length) {
       router.push(`/items?search=${search}`);
       setSearch('');
     }
   };
-
-  const debouncedRedirect = useDebounce(handleRedirect, INTERVAL_TIME);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const normalizedText = normalizeText(event.target.value);
@@ -34,10 +29,6 @@ const Search = () => {
     handleRedirect();
   };
 
-  useEffect(() => {
-    if (search) debouncedRedirect();
-  }, [search]);
-
   return (
     <div className="lg:w-3/4 w-full">
       <form
@@ -46,9 +37,9 @@ const Search = () => {
       >
         <input
           className="w-3/4 focus:outline-none focus:shadow-outline"
-          id="search"
-          type="text"
+          name="search"
           autoComplete="off"
+          value={search}
           onChange={handleChange}
           aria-label={placeholder}
           placeholder={placeholder}
