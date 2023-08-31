@@ -4,7 +4,7 @@ describe('objectIsEmpty', () => {
   describe('when object has keys', () => {
     const obj = {
       a: '1',
-      b: '2',
+      b: '2'
     };
 
     it('should return false', () => {

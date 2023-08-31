@@ -1,4 +1,4 @@
-import { createCustomError } from ".";
+import { createCustomError } from '.';
 
 describe('createCustomError', () => {
   test('returns an Error, with the message and status properties', () => {

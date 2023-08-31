@@ -1,1 +1,1 @@
-export const arrayIsEmpty = (arr?: any[]): boolean => !arr || !arr.length;
+export const arrayIsEmpty = (arr?: any[]): boolean => !arr?.length;

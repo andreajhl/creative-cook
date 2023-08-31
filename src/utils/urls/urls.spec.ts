@@ -5,7 +5,7 @@ describe('toQueryParams', () => {
     const obj = {
       a: ['1'],
       b: ['2'],
-      c: ['3'],
+      c: ['3']
     };
     const resultString = toQueryParams(obj);
     const expectedString = '?a=1&b=2&c=3';
