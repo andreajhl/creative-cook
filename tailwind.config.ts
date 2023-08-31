@@ -15,6 +15,10 @@ const config: Config = {
           },
         },
       },
+      colors: {
+        'brand-600': 'rgb(148, 95, 80)',
+        'brand-300': 'rgb(252, 197, 179)'
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
