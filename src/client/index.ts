@@ -22,7 +22,7 @@ export const getRecipeByID: GetRecipeByID = async (id) => {
   }
 };
 
-export const getRecipes: GetRecipes = async (search) => {
+export const getRecipeSearch: GetRecipes = async (search) => {
   try {
     const { data } = await axios.get(`/api/items?q=${search}`);
 
