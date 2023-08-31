@@ -8,11 +8,11 @@ const NotFound = () => {
 
   return (
     <main className="grid min-h-full place-items-center px-6 py-24 sm:py-32 lg:px-8">
-      <div className="text-center">
+      <div className="text-center w-full">
         <h1 className="mt-4 text-3xl font-bold tracking-tight text-title sm:text-5xl">{pageNotFound.title}</h1>
-        <div className="flex justify-center items-start mt-6">
-          <p className="text-lg font-bold mr-2 text-gray-900">404 |</p>
-          <p className="text-lg text-gray-600">{pageNotFound.subtitle}</p>
+        <div className="flex justify-center items-start mt-6 w-full">
+          <p className="text-base md:text-lg font-bold md:mr-2 text-gray-900">404 |</p>
+          <p className="text-base text-justify md:text-lg text-gray-600">{pageNotFound.subtitle}</p>
         </div>
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <Link
