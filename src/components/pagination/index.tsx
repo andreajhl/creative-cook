@@ -3,8 +3,7 @@
 import { useMemo } from 'react';
 import classNames from 'classnames';
 import { SlArrowRight, SlArrowLeft } from 'react-icons/sl';
-import { VISIBLE_PAGES } from '@/constants/api';
-import { MAX_ITEMS_PAGINATION } from '@/constants/pagination';
+import { MAX_ITEMS_PAGINATION, VISIBLE_PAGES } from '@/constants/pagination';
 import { PaginationProps } from '@/interfaces/components/pagination';
 
 const Pagination = ({ setCurrentPag, currentPage, setItems, getNewItemsPage }: PaginationProps) => {
