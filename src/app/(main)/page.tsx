@@ -7,7 +7,7 @@ import { carouselImages } from '../../constants/carousel';
 import wordings from '../../wordings';
 
 export const metadata: Metadata = {
-  title: 'Home',
+  title: 'Creative Cook',
   description: 'Get all the recipes you need for your day to day.'
 };
 

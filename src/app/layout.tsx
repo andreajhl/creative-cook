@@ -1,5 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import NavBar from '@/components/ui/navBar';
 import { LayoutProps } from '@/interfaces/pages';
 
 export const metadata: Metadata = {
@@ -13,7 +14,14 @@ const RootLayout = ({ children }: LayoutProps) => {
   return (
     <html lang="en">
       <body className="h-full min-h-screen">
-        {children}
+        <main className="h-full min-h-inherit">
+          <NavBar />
+          <div className="flex flex-col justify-center items-center w-full">
+            <div className="max-w-screen-2xl w-full">
+              {children}
+            </div>
+          </div>
+        </main>
       </body>
     </html>
   );
